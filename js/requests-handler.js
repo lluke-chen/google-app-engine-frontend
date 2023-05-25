@@ -1,7 +1,7 @@
 var url = 'https://api-dot-valued-etching-380113.ew.r.appspot.com/';
 
 function generateNumbers() {
-    for (var i = 0; i < 1000; i++) {
+    for (var i = 0; i < 10000; i++) {
         fetch(url + 'generate-numbers', {
             method: 'GET',
             mode: 'no-cors',
@@ -17,7 +17,11 @@ function getResults() {
         method: 'GET',
         mode: 'no-cors',
     })
-        .then((response) => {})
+        .then((response) => response.text())
+        .then((html) => {
+            var resultsElement = document.getElementById('results');
+            resultsElement.innerHTML = html;
+        })
         .catch((error) => {});
 
     console.log('Results fetched');
