@@ -9,4 +9,5 @@ function generateNumbers() {
             .then((response) => {})
             .catch((error) => {});
     }
+    console.log('Numbers generated');
 }
