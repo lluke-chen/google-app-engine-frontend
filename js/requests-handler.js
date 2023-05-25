@@ -17,8 +17,8 @@ async function generateNumbers() {
                 .catch((error) => {});
         }
 
-        for (let i = 0; i < 25; i++) {
-            console.log(`Waiting ${i} seconds...`);
+        for (let i = 0; i < 8; i++) {
+            console.log(`Waiting seconds...`);
             await sleep(i * 1000);
         }
 
