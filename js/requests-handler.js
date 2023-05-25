@@ -5,19 +5,17 @@ function sleep(ms) {
 }
 
 function generateNumbers() {
-    for (var i = 0; i < 10; i++) {
-        console.log('Generating...');
-        for (var i = 0; i < 1000; i++) {
-            fetch(url + 'generate-numbers', {
-                method: 'GET',
-                mode: 'no-cors',
-            })
-                .then((response) => {})
-                .catch((error) => {});
-        }
-
-        console.log('Done.');
+    console.log('Generating...');
+    for (var i = 0; i < 1000; i++) {
+        fetch(url + 'generate-numbers', {
+            method: 'GET',
+            mode: 'no-cors',
+        })
+            .then((response) => {})
+            .catch((error) => {});
     }
+
+    console.log('Done.');
 }
 
 // function getResults() {
