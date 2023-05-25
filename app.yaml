@@ -1,0 +1,19 @@
+runtime: python37
+
+automatic_scaling:
+    min_instances: 2
+    max_instances: 10
+
+handlers:
+    - url: /.*
+      static_dir: css
+
+    - url: /.*
+      static_dir: js
+
+    - url: /images
+      static_dir: images
+
+    - url: /.*
+      static_files: index.html
+      upload: index.html
