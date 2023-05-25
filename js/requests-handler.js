@@ -18,7 +18,7 @@ async function generateNumbers() {
         }
 
         for (let i = 0; i < 8; i++) {
-            console.log(`Waiting seconds...`);
+            console.log(`Waiting...`);
             await sleep(i * 1000);
         }
 
