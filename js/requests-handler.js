@@ -4,9 +4,8 @@ function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function generateNumbers() {
+function generateNumbers() {
     for (var i = 0; i < 10; i++) {
-        // Generate 1000 numbers
         console.log('Generating...');
         for (var i = 0; i < 1000; i++) {
             fetch(url + 'generate-numbers', {
@@ -17,14 +16,7 @@ async function generateNumbers() {
                 .catch((error) => {});
         }
 
-        for (let i = 0; i < 8; i++) {
-            console.log(`Waiting...`);
-            await sleep(i * 1000);
-        }
-
         console.log('Done.');
-
-        // Sleep function
     }
 }
 
